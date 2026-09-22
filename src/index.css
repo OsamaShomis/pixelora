@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-tajawal: 'Tajawal', 'IBM Plex Sans Arabic', sans-serif;
+    --font-arabic: 'IBM Plex Sans Arabic', 'Tajawal', sans-serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --bg-light: #f1f5f9;
+    --text-primary-light: #0f172a;
+    --border-light: #cbd5e1;
+  }
+
+  body {
+    font-family: var(--font-tajawal);
+    background-color: var(--bg-light);
+    color: var(--text-primary-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  .dark body {
+    background-color: #0f172a;
+    color: #f8fafc;
+  }
+
+  ::selection {
+    background-color: #6c4dff;
+    color: #ffffff;
+  }
+}
+
+/* Custom scrollbars for editor panels */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(108, 77, 255, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(108, 77, 255, 0.55);
+}
+
+/* Range input customization for crisp high-contrast light theme */
+input[type='range'] {
+  accent-color: #6c4dff;
+}
+
+/* Enhanced checkerboard background for transparent canvas preview */
+.canvas-checkerboard {
+  background-image: linear-gradient(45deg, #cbd5e1 25%, transparent 25%),
+    linear-gradient(-45deg, #cbd5e1 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #cbd5e1 75%),
+    linear-gradient(-45deg, transparent 75%, #cbd5e1 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+  background-color: #f1f5f9;
+}
+
+.canvas-checkerboard-dark {
+  background-image: linear-gradient(45deg, #1e293b 25%, transparent 25%),
+    linear-gradient(-45deg, #1e293b 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #1e293b 75%),
+    linear-gradient(-45deg, transparent 75%, #1e293b 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+  background-color: #0f172a;
+}
+
+

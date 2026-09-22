@@ -1,0 +1,10 @@
+node_modules
+dist
+.git
+.github
+.cache
+backend
+*.log
+.DS_Store
+cookies.txt
+.gcloudignore

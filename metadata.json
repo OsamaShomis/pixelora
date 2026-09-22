@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Remix Pixelora - بيكسلورا",
+  "description": "محرر صور عربي حديث واحترافي لتحرير الصور والمنتجات والطبقات والفلاتر وإزالة الخلفيات وتصدير التصاميم",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
